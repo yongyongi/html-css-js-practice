@@ -1,5 +1,66 @@
 # html, css, js 간단 복습
 
+- html은 웹 페이지를 구성하는 뼈대이다.
+- css는 뼈대 위에 꾸며주는 역할을 한다.
+- js는 웹 페이지가 동적으로 작동할 수 있게 함.
+
+### css파일 적용
+
+html의 head태그 안에 밑에와 같은 코드를 삽입해준다.
+
+```html
+<link rel="stylesheet" href="./css/main.css" />
+```
+
+rel은 stylesheet으로 고정이고, href에는 css파일의 경로를 입력한다.
+
+### js파일 적용
+
+html의 body태그가 끝나는 부분에 밑에와 같은 코드를 삽입해준다.
+
+```html
+<script src="./js/start.js" charset="uft-8"></script>
+```
+
+html의 head태그나 body태그가 시작되는 부분에서 선언 해도 되지만, 통상적으로 body태그가 끝나는 부분에 선언하는 것을 선호한다. 왜냐 html파일을 읽을때, 위에서부터 아래로 읽게 되는데 js파일의 코드분량이 많다면 js파일을 읽는데 오래 걸리기 때문에 웹페이지가 늦게 띄워질 수 있다. 즉, 로딩이 길어질 수 있기 때문에 js파일을 상단에 import하지 않는것이 좋다.
+
+### 동적 기능만들기(버튼)
+
+js로 페이지를 동적으로 만들기 위해서는 페이지의 부분부분을 선택할 수 있어야 하며 querySelector로 선택할 수 있다.
+
+```js
+const main = document.querySelector("#main");
+```
+
+document.querySelector는 문서에서 css 선택자에 대응되는 것을 선택해주는 기능이다. 위 코드는 id가 main인 태그를 선택하여 main변수에 저장하는 것이다.
+
+아주 간단히 main이 사라지는 함수를 만들어 본다.
+
+```js
+function hideMain() {
+  main.style.display = "none";
+}
+```
+
+이 함수가 동작하기 위해서 html 버튼 태그에 `onclick` 속성을 추가하고, 값으로 `js:hideMain()`을 주면 된다.
+
+```html
+<button onclick="js:hideMain()">사라지기</button>
+```
+
+이제 사라지기 버튼을 클릭하면, hideMain함수가 실행되고, main태그의 display가 none으로 바뀌면서 화면에서 사라지게 된다.
+
+### 에니메이션
+
+[TCPschool](http://tcpschool.com/css/css3_transform_animation) 참고해서 사용하기
+
+- innerHTML : 태그에 text넣는다.
+- createElement : 태그를 만든다.
+- classList.add : 태그에 클래스명을 만든다.
+- addeventListener : 이벤트 생성
+
+위에와 같은 메서드들은 js에서 html로 접근할 수 있게 해준다.
+
 ## 부트스트랩
 
 각각의 디바이스 화면에 맞게 디자인 한 것을 반응형 웹사이트라고 한다. 직접 반응형으로 디자인 할수도 있지만, 코드가 길어지고, css에 대한 이해도가 높아야한다. 이떄, 이미 만들어진 반응형 컴포넌트를 사용할 수 있게 해주는게 부트스트랩이다.
