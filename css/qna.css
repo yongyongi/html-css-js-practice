@@ -1,3 +1,59 @@
 #qna {
   display: none;
+  width: 80%;
+}
+
+.qBox {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  box-shadow: 1px 1px 9px 0px #8ab66b;
+}
+
+.answerButton {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+}
+.answerButton:hover,
+.answerButton:focus {
+  background-color: #398235;
+  color: whitesmoke;
+}
+
+.status {
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+.statusBar {
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
+  background: #c9de96; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #c9de96 0%,
+    #8ab66b 44%,
+    #398235 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #c9de96 0%,
+    #8ab66b 44%,
+    #398235 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #c9de96 0%,
+    #8ab66b 44%,
+    #398235 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
+
+  border-radius: 20px;
 }

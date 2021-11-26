@@ -122,7 +122,10 @@ function hideMain() {
 부트스트랩을 통해서 margin과 padding도 설정을 할 수 있다. [여기서](https://getbootstrap.com/docs/5.1/utilities/spacing/#notation) 확인해보자.
 
 이미지 크기가 화면을 넘을 경우 밑에와 같은 부트스트랩의 설정으로 사이즈를 조절 할 수 있다.
-<img src="..." class="img-fluid" alt="...">
+
+```html
+<img src="..." class="img-fluid" alt="..." />
+```
 
 ## font 변경시키는 방법
 
@@ -135,3 +138,13 @@ google font를 이용하여 font를 변경할 수 있다. 원하는 폰트를 �
 ```
 
 그러면 font가 변경된다.
+
+# 오류 및 시행착오
+
+js에서 img태그를 만든 다음, src를 적용시키기 위해서 이렇게 설정을 해주었다.
+
+```js
+Img.src = `./img/image-${res}.png`;
+```
+
+하지만, 브라우저에서 이미지를 가져오지 못했다. 그 이유는 현재 js파일을 기준으로 이미지 경로를 넣었기 때문이다. img는 js에서 만들었어도 html에 생기는 것이기 때문에 html파일 기준으로 src경로를 작성하여야 하는 것이다. 사소하게 실수를 많이 할 것 같은 부분이다.
