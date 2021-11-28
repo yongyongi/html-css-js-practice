@@ -5,7 +5,7 @@ function setShare() {
   let resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = "십이간지 연애유형 결과";
   const shareDes = infoList[resultAlt].name;
-  const shareImage = `${url}img/image${resultAlt}.png`;
+  const shareImage = `${url}img/image-${resultAlt}.png`;
   const shareURL = `${url}pages/result-${resultAlt}.html`;
 
   Kakao.Link.sendDefault({
