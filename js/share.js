@@ -8,7 +8,7 @@ function setShare() {
   const shareImage = `${url}img/image${resultAlt}.png`;
   const shareURL = `${url}pages/result-${resultAlt}.html`;
 
-  Kakao.Link.createDefaultButton({
+  Kakao.Link.sendDefault({
     objectType: "feed",
     content: {
       title: shareTitle,
