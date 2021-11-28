@@ -4,7 +4,13 @@
 - css는 뼈대 위에 꾸며주는 역할을 한다.
 - js는 웹 페이지가 동적으로 작동할 수 있게 함.
 
-### css파일 적용
+## html meta og태그란?
+
+og태그는 서비스 링크를 공유할 때 보여지는 것들을 설정하는 태그이다. 링크를 복사하여 카톡으로 전달할 때 이미지가 보이는 링크도 있고, 없는 링크도 있고 다양했는데 이 것을 og태그에서 설정할 수 있다.
+
+[meta og태그](https://www.next-t.co.kr/blog/%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84%EC%B5%9C%EC%A0%81%ED%99%94-SEO-%ED%85%8C%ED%81%AC%EB%8B%88%EC%BB%ACSEO-%EC%98%A4%ED%94%88%EA%B7%B8%EB%9E%98%ED%94%84-OpenGraph-metaogtag-%ED%8A%B8%EC%9C%84%ED%84%B0%EC%B9%B4%EB%93%9C-TwitterCards)
+
+## css파일 적용
 
 html의 head태그 안에 밑에와 같은 코드를 삽입해준다.
 
@@ -14,7 +20,7 @@ html의 head태그 안에 밑에와 같은 코드를 삽입해준다.
 
 rel은 stylesheet으로 고정이고, href에는 css파일의 경로를 입력한다.
 
-### js파일 적용
+## js파일 적용
 
 html의 body태그가 끝나는 부분에 밑에와 같은 코드를 삽입해준다.
 
@@ -24,7 +30,7 @@ html의 body태그가 끝나는 부분에 밑에와 같은 코드를 삽입해�
 
 html의 head태그나 body태그가 시작되는 부분에서 선언 해도 되지만, 통상적으로 body태그가 끝나는 부분에 선언하는 것을 선호한다. 왜냐 html파일을 읽을때, 위에서부터 아래로 읽게 되는데 js파일의 코드분량이 많다면 js파일을 읽는데 오래 걸리기 때문에 웹페이지가 늦게 띄워질 수 있다. 즉, 로딩이 길어질 수 있기 때문에 js파일을 상단에 import하지 않는것이 좋다.
 
-### 동적 기능만들기(버튼)
+## 동적 기능만들기(버튼)
 
 js로 페이지를 동적으로 만들기 위해서는 페이지의 부분부분을 선택할 수 있어야 하며 querySelector로 선택할 수 있다.
 
@@ -50,16 +56,18 @@ function hideMain() {
 
 이제 사라지기 버튼을 클릭하면, hideMain함수가 실행되고, main태그의 display가 none으로 바뀌면서 화면에서 사라지게 된다.
 
-### 에니메이션
+## 에니메이션
 
 [TCPschool](http://tcpschool.com/css/css3_transform_animation) 참고해서 사용하기
 
+## js에서 html로 접근할 수 있게 해주는 메서드
+
+- querySelector : 태그를 선택한다.
 - innerHTML : 태그에 text넣는다.
 - createElement : 태그를 만든다.
 - classList.add : 태그에 클래스명을 만든다.
 - addeventListener : 이벤트 생성
-
-위에와 같은 메서드들은 js에서 html로 접근할 수 있게 해준다.
+- appendChild : 태그 밑에 태그를 붙여준다.
 
 ## 부트스트랩
 
@@ -139,7 +147,7 @@ google font를 이용하여 font를 변경할 수 있다. 원하는 폰트를 �
 
 그러면 font가 변경된다.
 
-# 오류 및 시행착오
+## 오류 및 시행착오
 
 js에서 img태그를 만든 다음, src를 적용시키기 위해서 이렇게 설정을 해주었다.
 
@@ -148,3 +156,9 @@ Img.src = `./img/image-${res}.png`;
 ```
 
 하지만, 브라우저에서 이미지를 가져오지 못했다. 그 이유는 현재 js파일을 기준으로 이미지 경로를 넣었기 때문이다. img는 js에서 만들었어도 html에 생기는 것이기 때문에 html파일 기준으로 src경로를 작성하여야 하는 것이다. 사소하게 실수를 많이 할 것 같은 부분이다.
+
+```js
+Img.src = `../img/image-${res}.png`;
+```
+
+경로를 바꾸어주었더니 잘 작동되었다.
