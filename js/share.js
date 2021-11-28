@@ -1,7 +1,7 @@
 let url = "https://giftyou.netlify.app/";
 
 function setShare() {
-  let resultImg = document.querySelector("resultImg");
+  let resultImg = document.querySelector("#resultImg");
   let resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = "십이간지 연애유형 결과";
   const shareDes = infoList[resultAlt];
