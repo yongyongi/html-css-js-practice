@@ -6,6 +6,21 @@
   border-radius: 30px;
 }
 
+#shareResult {
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.gohome {
+  border: none;
+  border-radius: 20px;
+  color: #000000;
+  font-weight: bolder;
+  background-color: #fee500;
+}
+
 .kakao {
   border: none;
   border-radius: 20px;

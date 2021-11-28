@@ -9,9 +9,7 @@ function calResult(type) {
     select[type[i]]++;
   }
 }
-// function setResult (){
 
-// }
 function goResult() {
   qna.style.display = "none";
   result.style.WebkitAnimation = "fadeIn 1s";
